@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0px; margin:0px auto}
+.map-container{width:100%}
+
+.section-slogan.list{border-top:0;height:351px;background-color:#f0f0f0;padding-top:41px}
+.section-slogan.list > div{height:272px;background-color:#525252;background-image:url(../img/slogan-list.jpg);background-position:center}
+
+.map-container .crumbsBox{width:100%;background:#f4f5f5;overflow:hidden;margin-top:102px}
+.map-container .crumbsBox .crumbs{width:1226px;margin:0 auto}
+.map-container .crumbsBox .crumbs a{font-size:14px;color:#a4a4a9;display:inline-block;float:left;margin:20px 0;margin-right:20px;position:relative}
+.map-container .crumbsBox .crumbs a:after{display: block;content:'>';float:left;position:absolute;top:0;right:-15px}
+.map-container .crumbsBox .crumbs a:last-child:after{display:none}
+.map-container .crumbsBox .crumbs .active{color:#23b6f9}
+
+.MenuList{width:1226px;overflow:hidden;margin-top:37px}
+.MenuList .list{width:100%;overflow:hidden}
+.MenuList .list .Tits{border-bottom:solid 2px #199def;overflow:hidden;padding:10px 0}
+.MenuList .list .Tits .tits{color:#535353;position:relative;float:left;line-height:32px}
+.MenuList .list .Tits .tits span:nth-child(1){font-size:20px;float:left;display:inline-block;margin-left:45px}
+.MenuList .list .Tits .tits span:nth-child(2){display:block;float:left;color:#535353;margin-left:10px}
+.MenuList .list .Tits .tits span:nth-child(3){display:block;float:left;color:#535353;margin-left:10px;font-size:14px}
+.MenuList .list .Tits .tit1:before{width:32px;height:32px;display:block;content:'';float:left;position:absolute;top:0;left:0px;background:url(../img/map_index.jpg) no-repeat center top}
+.MenuList .list .Tits .tit2:before{width:32px;height:32px;display:block;content:'';float:left;position:absolute;top:0;left:0px;background:url(../img/map_cer.jpg) no-repeat center top}
+.MenuList .list .Tits .tit3:before{width:32px;height:32px;display:block;content:'';float:left;position:absolute;top:0;left:0px;background:url(../img/map_edu.jpg) no-repeat center top}
+.MenuList .list .Tits .tit4:before{width:32px;height:32px;display:block;content:'';float:left;position:absolute;top:0;left:0px;background:url(../img/map_partime.jpg) no-repeat center top}
+
+.MenuList .menu_list{width:100%;overflow:hidden;box-sizing:border-box;border:solid 1px #ddd;border-top:0}
+.MenuList .menu_list table{width:1010px;float:left}
+.MenuList .menu_list tr{width:100%}
+.MenuList .menu_list td:nth-child(2){width:15px}
+.MenuList .menu_list .menu_left{width:145px;background:#f8f8f8;padding:20px 0px;text-align:center;font-size:14px;color:#555}
+
+.MenuList .menu_list .menu_right{width:850px;margin-left:2%; padding:20px 0}
+.MenuList .menu_list  tr:first-child .menu_right {padding-top:20px}
+.MenuList .menu_list .menu_right a:last-child{margin-bottom:0}
+.MenuList .menu_list .menu_right a{float:left;margin-right:20px;display:inline-block;font-size:12px;color:#888;margin-bottom:15px}
+
+.MenuList .menu_list1{width:100%;overflow:hidden;box-sizing:border-box;border:solid 1px #ddd;border-top:0;padding:20px}
+.MenuList .menu_list1 tr{width:100%}
+.MenuList .menu_list1 td:nth-child(2){width:15px}
+.MenuList .menu_list1 tr:first-child .menu_left{padding-top:20px}
+.MenuList .menu_index{padding:20px}
+.MenuList .menu_index tr .menu_right a{width:72px;margin-right:120px;margin-bottom:15px;display:inline-block}
+.MenuList .menu_index tr:last-child .menu_right a{margin-bottom:0}

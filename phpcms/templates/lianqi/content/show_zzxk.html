@@ -1,0 +1,3115 @@
+{template "content","header"}
+<link type="text/css" rel="stylesheet" href="/statics/css/gsfw_work.css"/>
+<div class="wrapper " style="background: rgb(249, 249, 249) none repeat scroll 0% 0%;">
+    <div class="wrapper-main">
+        <section class="businessDetails">
+            <div class="business_wrapper wrapper_info" style="background:url(/statics/img/cer/info_top_bg_1.jpg) no-repeat center top">
+                <!-- content main -->
+                <h2 class="search_location">
+                    您所在的位置：
+                    <a href="/">
+                        首页
+                    </a>
+                    &gt;
+                    <a href="/index.php?m=content&c=index&a=lists&catid=7">
+                        资质许可
+                    </a>
+                    &gt;{$title}
+                </h2>
+                <div class="business_gd1">
+                    <div class="bus_gd1_main">
+                        <div class="bus_gd1_l fl">
+                            <a href="">
+                                <img src="{$thumb}" width="595"/>
+                            </a>
+                        </div>
+                        <div class="bus_gd1_r fl">
+                            <div class="card_context">
+                                <h2>
+                                    <span class="r_img">
+                                        资质报价估算
+                                    </span>
+                                </h2>
+                                <!-- -资质报价估算- -->
+                                <div class="card card1">
+                                    <form action="/index.php?m=content&c=index&a=submit_cer" method="post" class="list-input-form">
+                                        <input name="dosubmit" id="dosubmit" value="1" type="hidden"/>
+                                        <ul>
+                                            <li>
+                                                <select id="sco-per" class="list-input-txt select required" name="sco_id">
+                                                    <option value="0">
+                                                        选择所在地区
+                                                    </option>
+                                                    <option value="36" selected="">
+                                                        上海
+                                                    </option>
+                                                    <option value="32">
+                                                        河南
+                                                    </option>
+                                                    <option value="37">
+                                                        安徽
+                                                    </option>
+                                                    <option value="38">
+                                                        湖北
+                                                    </option>
+                                                    <option value="39">
+                                                        黑龙江
+                                                    </option>
+                                                    <option value="30" >
+                                                        山东
+                                                    </option>
+                                                    <option value="33">
+                                                        浙江
+                                                    </option>
+                                                    <option value="34">
+                                                        河北
+                                                    </option>
+                                                    <option value="35">
+                                                        云南
+                                                    </option>
+                                                    <option value="40">
+                                                        贵州
+                                                    </option>
+                                                    <option value="41">
+                                                        福建
+                                                    </option>
+                                                    <option value="42">
+                                                        广东
+                                                    </option>
+                                                    <option value="43">
+                                                        内蒙古
+                                                    </option>
+                                                    <option value="44">
+                                                        山西
+                                                    </option>
+                                                    <option value="45">
+                                                        江苏
+                                                    </option>
+                                                    <option value="46">
+                                                        广西
+                                                    </option>
+                                                    <option value="47">
+                                                        湖南
+                                                    </option>
+                                                    <option value="48">
+                                                        陕西
+                                                    </option>
+                                                    <option value="49">
+                                                        辽宁
+                                                    </option>
+                                                    <option value="50">
+                                                        江西
+                                                    </option>
+                                                    <option value="51">
+                                                        吉林
+                                                    </option>
+                                                    <option value="52">
+                                                        宁夏
+                                                    </option>
+                                                    <option value="53">
+                                                        西藏
+                                                    </option>
+                                                    <option value="54">
+                                                        新疆
+                                                    </option>
+                                                    <option value="55">
+                                                        北京
+                                                    </option>
+                                                    <option value="56">
+                                                        天津
+                                                    </option>
+                                                    <option value="57">
+                                                        重庆
+                                                    </option>
+                                                    <option value="58">
+                                                        青海
+                                                    </option>
+                                                    <option value="59">
+                                                        海南
+                                                    </option>
+                                                    <option value="60">
+                                                        四川
+                                                    </option>
+                                                    <option value="61">
+                                                        甘肃
+                                                    </option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select id="sysort" class="list-input-txt select required" name="parent_id">
+                                                    <option value="0">
+                                                        选择资质分类
+                                                    </option>
+                                                    {pc:content action="category" catid="7" num="25" siteid="$siteid" order="listorder ASC"}
+                                     				{loop $data $r}
+                                                    <option value="{$r['catid']}">
+                                                        {$r['catname']}
+                                                    </option>
+                                                    {/loop}
+                                                    {/pc}
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select id="syitem" class="list-input-txt select required" name="zizhi_id">
+                                                    <option value="0">
+                                                        选择资质专业
+                                                    </option>
+                                                    <option value="{$id}">
+                                                        {$title}
+                                                    </option>
+                                                    
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select id="sylevel" class="list-input-txt select required selected2" name="level">
+                                                    <option value="0">
+                                                        选择资质等级
+                                                    </option>
+                                                    
+                                                    {loop $level $k $v}
+                                                    <option value="$k">
+                                                        {$v['level']}
+                                                    </option>
+                                                    {/loop}
+                                                </select>
+                                            </li>
+                                            <li class="img-code">
+                                                <input id="cer_phone" name="phone" value="13142774496" type="hidden"/>
+                                                <input id="cer_yzm" placeholder="输入验证码" name="verifyCode" class="list-input-txt info required img_yzm waring" type="text"/>
+                                                <img id="code_img" src="/data/captcha?v=5abe1c2e6a1ba" alt="换一个" title="换一个" style=""/>
+                                                <span id="trans" class="trans">
+                                                    看不清楚，换一张
+                                                </span>
+                                            </li>
+                                            <li class="sel_items">
+                                                <span id="parent_id" style="display:block">
+                                                    食药监管类
+                                                </span>
+                                                <span id="zizhi_id" style="display:inline">
+                                                    ISO 13485认证
+                                                </span>
+                                                <span id="level" style="display: inline;">
+                                                    标准
+                                                </span>
+                                                <span id="sco_id" style="display:inline">
+                                                    山东
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <input value="开始报价" class="list-input-sub ajax-bus" type="submit"/>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                                <div class="card card2">
+                                    <div class="sel_items">
+                                        <span id="parent_id" style="display:block">
+                                            食药监管类
+                                        </span>
+                                        <span id="zizhi_id" style="display:inline">
+                                            ISO 13485认证
+                                        </span>
+                                        <span id="level" style="display:inline">
+                                            标准
+                                        </span>
+                                        <span id="sco_id" style="display:inline">
+                                            山东
+                                        </span>
+                                    </div>
+                                    <div class="result">
+                                        <div class="Tit">
+                                            计算结果：
+                                        </div>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="tits">
+                                                        报价：
+                                                    </th>
+                                                    <td id="total_people_price">
+                                                        面议
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="tits">
+                                                        费用说明：
+                                                    </th>
+                                                    <td class="mes">
+                                                        此报价受市场及其他影响较多，当前只为您提供参考报价，详情咨询客服
+                                                    </td>
+                                                </tr>
+                                                <!--
+                                                    <tr>
+                                                        <th class="tits">
+                                                            服务代理费用：
+                                                        </th>
+                                                        <td id="agent_price">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="tits">
+                                                            合计：
+                                                        </th>
+                                                        <td id="total_price">
+                                                        </td>
+                                                    </tr>
+                                                -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="mes">
+                                    </div>
+                                    <div class="but">
+                                        <span class="apply">
+                                            重新报价
+                                        </span>
+                                        <a class="ajax-cons" rel="nofollow" href="http://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1495766315246815440879" target="_blank">
+                                            轻松办理
+                                        </a>
+                                    </div>
+                                    <div class="hidden">
+                                        当前城市暂无报价，报价以山东为参考
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="r_img step_icon_context">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var djArray = null;
+                </script>
+                <script>
+                    $(function(){
+                    $('#publish-per').change(function(){
+                    location.href = '/cer/info?id=164&sco_id='+$(this).val();
+                    });
+                    })
+                    var dzArry = null;
+                    //			console.log(dzArry);
+                </script>
+            </div>
+            <!-- -可能关注的项目- -->
+            <div class="line">
+            </div>
+            <!-- 新增非建筑资质导航 -->
+            <div class="bus-details">
+                <div class="bus-details-nav info-other clearfix">
+                    <ul>
+                        <li>
+                            <a href="#details" style="color: rgb(102, 102, 102);">
+                                业务详情
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#valuable" style="color: rgb(102, 102, 102);">
+                                价值体现
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#strength" style="color: rgb(68, 132, 234);">
+                                企业实力
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#service" style="color: rgb(102, 102, 102);">
+                                服务保障
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#problem" style="color: rgb(102, 102, 102);">
+                                常见问题
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#case" style="color: rgb(102, 102, 102);">
+                                证书展示
+                            </a>
+                        </li>
+                    </ul>
+                    <div>
+                        <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                            立即办理
+                        </a>
+                        咨询热线：400-8394-777
+                    </div>
+                </div>
+            </div>
+            <!-- 新增非建筑资质业务详情 -->
+            <div class="bus-details-con clearfix" style="position:relative">
+                <a name="details" class="floor">
+                </a>
+                <div class="bus-details-con-main">
+                    <ul>
+                        <li class="menu1">
+                            <a href="#">
+                                业务描述
+                            </a>
+                        </li>
+                        <li class="menu2 current">
+                            <a href="#">
+                                所需材料
+                            </a>
+                        </li>
+                        <li class="menu3">
+                            <a href="#">
+                                办理条件
+                            </a>
+                        </li>
+                        <li class="menu4">
+                            <a href="#">
+                                办理流程
+                            </a>
+                        </li>
+                        <li class="menu5">
+                            <a href="#">
+                                办理周期
+                            </a>
+                        </li>
+                        <li class="menu6">
+                            <a href="#">
+                                注意事项
+                            </a>
+                        </li>
+                    </ul>
+                    <div>
+                        <div class="bus-details-con-box" style="display: none;">
+                            <div>
+                                <p class="MsoNormal">
+                                    <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            适用于进行医疗器械的设计和开发、生产、安装和服务或相关服务的设计、开发和提供等相关行业。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <!-- EndFragment -->
+                            </div>
+                        </div>
+                        <div class="bus-details-con-box" style="display: block;">
+                            <div>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            1
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请方授权代表签署的产品质量认证申请书、质量体系认证申请书；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            2
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请单位营业执照或注册证明文件
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            (
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            复印件
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            )
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请单位质量手册，必要时提供企业的程序文件；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            4
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请认证的产品或质量体系覆盖的产品标准；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            5
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请方声明执行的标准；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            6
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、医疗器械产品注册证
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            (
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            复印件
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            )
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            7
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、产品生产全过程情况总结，产品生产流程及特殊过程、关键过程说明；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            8
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、近三年产品销售情况及用户反馈信息；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            9
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、主要外购、外协件清单；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            10
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、其他材料，如企业产品目录、产品简介、产品宣传材料等；为其提供过认证咨询的组织和人员的信息。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <!-- EndFragment -->
+                            </div>
+                        </div>
+                        <div class="bus-details-con-box" style="display: none;">
+                            <div>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            1
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请方应持有《医疗器械生产企业许可证》等资质证明材料；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            2
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、质量体系所覆盖的产品应符合国家有关标准或行业标准的规定，医疗器械产品应取得注册资格，产品已定型成批生产；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请方应根据按拟申请认证的标准建立文件化管理体系，并正式运行。生产三类医疗器械产品的企业，质量管理体系运行时间不得少于
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            6
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            个月，其它产品的生产企业，体系运行时间不少于
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            个月。并至少进行两次内审和一次管理评审；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            4
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、申请覆盖的产品应正常批量生产，保证对生产现场审核的正常进行，并能提供充分的质量记录；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            5
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、在认证申请前一年内，申请方质量管理体系所覆盖的产品无重大质量事故。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <!-- EndFragment -->
+                            </div>
+                        </div>
+                        <div class="bus-details-con-box" style="display: none;">
+                            <div>
+                                <p class="MsoNormal">
+                                    <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            一、初次认证：
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            1
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、企业将填写好的《
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO13485
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            认证分申请表》，认证中心收到申请认证材料后，会对文件进行初审，符合要求后发放《受理通知书》；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            2
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、现场检查一周前将检查组组成和检查计划正式报企业确认；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、现场检查按环境标志产品保障措施指南的要求和相对应的环境标志产品认证技术要求进行；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            4
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、检查组根据企业申请材料、现场检查情况、产品环境行为检验报告撰写环境标志产品综合评价报告，提交技术委员会审查；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            5
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、认证中心收到技术委员会审查意见后，汇总审查意见；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            6
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、认证中心向认证合格企业颁发环境标志认证证书，组织公告和宣传；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            7
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、获证企业如需标识，可向认证中心订购，如有特殊印制要求，应向认证中心提出申请并备案；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            8
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、年度监督审核每年一次。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            二、年度监督检查：
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            1
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、认证中心根据企业认证证书发放时间，制订年检计划，提前向企业下发年检通知。企业按合同要求缴纳年度监督管理费，认证中心组成检查组，到企业进行现场检查工作；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            2
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、现场检查时，对需要进行检验的产品，由检查组负责对申请认证的产品进行抽样并封样，送指定的检验机构检验；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、检查组根据企业材料、检查报告、产品检验报告撰写综合评价报告，报认证中心总经理批准；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            4
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、年度监督检查每年一次。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            三、复评认证：
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            年到期的企业，应重新填写《
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO13485
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            认证分申请表》，连同有关材料报认证中心。其余认证程序同初次认证。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <!-- EndFragment -->
+                            </div>
+                        </div>
+                        <div class="bus-details-con-box" style="display: none;">
+                            <div>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            20-40
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            个工作日
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <!-- EndFragment -->
+                            </div>
+                        </div>
+                        <div class="bus-details-con-box" style="display: none;">
+                            <div>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            1
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            建立于
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 9001:2000
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            的过程模式之上；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            2
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            依据符合各类全球法规的质量体系要求的模式建立；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            3
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、由于重点的改变成法规要求模式，
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            的编写者将
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 9001:2000
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            中强 调客户满意度的部分删除；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            4
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            并未被
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            FDA
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            采纳，
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            FDA
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            仍将继续坚持其独立的质量体系法规（
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            QSR
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ）。但是，
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            FDA
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            参与编写
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            的人员确信他们的标准和
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            可以并行。因此，一家符合
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            要求的公司也很容易达到
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            FDA QSR
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            的要求；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            5
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            TR 14969
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            是使用和执行
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            的指南；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            6
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            并非依照商业推进模式而是依照作为保持过程有效性的工具模式而建立；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            7
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、与
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 9001:2000
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            不同，
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            不允许制造厂商合理的裁减文件。为了确保公司符合规则要求，
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            显得更具说明性并要求某些过程文件仍需建立；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            8
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、风险管理也是
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            中一个非常关键的因素；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            9
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、在
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            和
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 9004:2000(
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            质量管理体系基础标准
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            )
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            之间没有重大联系；
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <p class="MsoNormal">
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            10
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            、
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 13485:2003
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            和其他“非质量”管理体系如
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            ISO 14001
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            和
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            OHSAS 18001
+                                        </span>
+                                        <span style="font-family:Microsoft YaHei;font-size:16px;">
+                                            相兼容。
+                                        </span>
+                                    </span>
+                                    <span style="font-family:宋体;font-size:9pt;">
+                                    </span>
+                                </p>
+                                <!-- EndFragment -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper1 rela" style="background:url(/statics/img/cer/advice_wrapper2.jpg) no-repeat center top">
+                <a name="valuable" class="floor floor-valuable">
+                </a>
+                <div class="certificate">
+                    <div class="Tits">
+                        以企业实际需求出发 为您制定专属资质
+                    </div>
+                    <!--
+                        <div class="p">
+                            承担房地产项目的建设规模不受限制，按照建设部《房地产开发资质管理规定》可以在全国范围承揽房地产开发项目
+                        </div>
+                    -->
+                    <div class="tab">
+                        <!-- shadow con_open -->
+                    </div>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper2 rela" style="background:url(/statics/img/cer/advice_wrapper3.jpg) no-repeat center top">
+                <a name="strength" class="floor">
+                </a>
+                <div class="certificate">
+                    <h3>
+                        有实力 更有效率
+                        <br/>
+                        还有0成本资质维护
+                    </h3>
+                    <div class="p">
+                        年检、延续 为您定制专属资质升级规划方案
+                    </div>
+                    <div class="p p1">
+                        <div class="link">
+                            <a href="javascript:;">
+                                展开了解更多
+                            </a>
+                        </div>
+                        <div class="add">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper2_open">
+                <div class="certificate1">
+                    <div class="Tits">
+                        <div class="close">
+                            ×
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            全国协作 效率高
+                        </li>
+                        <div>
+                            31家省级分公司，全国资源共享，优势互补，协作高；
+                            <br/>
+                            独创全国人才数据库，配证快；材料人员专人筹办，上门服务，效率高；
+                        </div>
+                    </ul>
+                    <ul>
+                        <li>
+                            一站式服务  付款灵活
+                        </li>
+                        <div>
+                            客服、培训、财务人员等一应俱全，资质细则了解彻底，审批顺畅；加班加点压缩办理周期，高效办理，一次通过率高，省时省钱；
+                        </div>
+                    </ul>
+                    <ul>
+                        <li>
+                            定制资质规划，促进资质升级
+                        </li>
+                        <div>
+                            提供长久技术支持，0成本维护企业资质，保证动态核查、延续顺利进行
+                            <br/>
+                            公司特设专业团队，定期提醒企业进行资质升级，不错过最佳时机
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper2 advice_wrapper3" style="background:url(/statics/img/cer/advice_wrapper4.jpg) no-repeat center top">
+                <div class="certificate">
+                    <h3>
+                        万里挑一，为何终选大志
+                    </h3>
+                    <div class="p">
+                        为什么80%的企业选择大志天成企业管理咨询集团有限公司？
+                    </div>
+                    <h3>
+                        这是秘密 告诉你如何快速成功申报！
+                    </h3>
+                    <div class="p p1">
+                        <div class="add">
+                        </div>
+                        <div class="link">
+                            <a href="javascript:;">
+                                展开了解更多
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper2_open">
+                <div class="certificate1">
+                    <div class="Tits">
+                        <div class="close">
+                            ×
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            制定计划•监督把控
+                        </li>
+                        <div>
+                            每个项目启动前，公司均会设计专项组，并做充分相关准备及申报计划，严格把控各个时间节点，并有客户管理中心透明监督，合作过程中不定时向合作伙伴汇报整个申报过程进度，确保合作事宜如约履行；
+                        </div>
+                    </ul>
+                    <ul>
+                        <li>
+                            专项申报•管理严苛
+                        </li>
+                        <div>
+                            公司特设材料技术部和专项申报部，对内我们有相适配的材料组卷绩效考核制度，同时材料部有内部材料审查流程，确保所有材料无人为失误；
+                        </div>
+                    </ul>
+                    <ul>
+                        <li>
+                            专家团队•一次达标
+                        </li>
+                        <div>
+                            专家团队分为材料技术指导型和材料指标审查型；材料整理过程中材料技术指导型专家会全程监督指导整个材料的整理细节及过程；完成后，材料指标审查型专家会对所有材料按照相关要求逐一审查，确保一次性达标；
+                        </div>
+                    </ul>
+                    <ul>
+                        <li>
+                            从业十年•资源丰富
+                        </li>
+                        <div>
+                            这个实力和经验，身为10年行业领军企业，你懂的！
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper1 advice_wrapper4 rela">
+                <a name="service" class="floor">
+                </a>
+                <div class="Tits">
+                    不要“假大空”的承诺  只要签约后的保障
+                </div>
+                <div class="certificate4">
+                    <li>
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon1.jpg"/>
+                        </div>
+                        <div class="tits">
+                            办理过程出现问题
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon2.jpg"/>
+                        </div>
+                        <div class="tits">
+                            反馈问题
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon3.jpg"/>
+                        </div>
+                        <div class="tits">
+                            客户关系管理中心
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon4.jpg"/>
+                        </div>
+                        <div class="tits">
+                            核实情况属实
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon5.jpg"/>
+                        </div>
+                        <div class="tits">
+                            大志天成企业管理咨询集团有限公司平台
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon6.jpg"/>
+                        </div>
+                        <div class="tits">
+                            理赔基金先行赔付
+                        </div>
+                    </li>
+                    <li class="p">
+                        <div class="icon">
+                            <img src="/statics/img/cer/advice_icon7.jpg"/>
+                        </div>
+                        <div class="tits">
+                            赔付到账
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="advice_wrapper advice_wrapper5" style="background:url(/statics/img/cer/advice_wrapper5.jpg) no-repeat center top">
+            </div>
+            <div class="common-problem rela">
+                <a name="problem" class="floor">
+                </a>
+                <h2 class="common-problem-bt">
+                    常见问题
+                </h2>
+                <ul>
+                    <li>
+                        <a href="http://www.dztcjt.com/faq/m-1-181" target="_blank">
+                            建筑施工企业怎么办理安全生产许可证？
+                        </a>
+                        <p>
+                            建筑施工企业怎么办理安全生产许可证?现在就把经验分享给大家。
+                            首先，办理安全生产许可证需要购买安全码锁
+                            其次，办理安全许可证需要配置相关主要人员
+                            接着，制定规章制度
+                            紧接着，准备办理安全生产许可证的申请资料
+                            最后，提出办理安全生产许可证的申请
+                            以上就是建筑事故企业办理安全生产许可证需要的流程，需要提醒的是，企业想要办理安…
+                        </p>
+                    </li>
+                    <li>
+                        <a href="http://www.dztcjt.com/faq/m-1-180" target="_blank">
+                            关于简化建筑业企业资质标准部分指标的通知
+                        </a>
+                        <p>
+                            给大家普及下各专业挂靠含金量高的证件，各行业的筒子们行动起来。一般要考执业资格证件，都跟自己大学所学专业有关系，这个好像是硬性条件吧。其次就是工作年限的要求把。
+                            先从我了解的建筑业开始。
+                            二级建造师。这个证件可能是建筑业有含金量且相对容易的证件。挂靠金额各专业有所差异，共5个专业，公路、水利、建筑、机电、市政。
+                            试科目
+                            一级建造师执业资格…
+                        </p>
+                    </li>
+                    <li>
+                        <a href="http://www.dztcjt.com/faq/m-1-179" target="_blank">
+                            水利水电工程施工总承包企业资质等级标准
+                        </a>
+                        <p>
+                            水利水电工程施工总承包企业资质分为特级、一级、二级、三级。
+                            一级资质标准：
+                            1、企业近10年承担过下列6项中的3项以上所列工程的施工，其中至少有1项是（1）（2）中的工程，工程质量合格。
+                            （1）库容10亿立方米以上或坝高80米以上大坝1座，或库容1亿立方米以上或坝高60米以上大坝2座；
+                            （2）过闸流量&gt;3000立方米/秒的拦河闸1座，或过闸流量&gt;10…
+                        </p>
+                    </li>
+                    <li>
+                        <a href="http://www.dztcjt.com/faq/m-1-178" target="_blank">
+                            电力工程施工总承包企业资质等级标准
+                        </a>
+                        <p>
+                            电力工程施工总承包企业资质分为特级、一级、二级、三级。
+                            一级资质标准：
+                            1、企业近5年承担过下列5项中的2项以上所列工程的施工总承包或主体工程承包，工程质量合格。
+                            （1）累计电站装机容量150万千瓦以上；
+                            （2）单机容量60万千瓦机组，或2台单机容量30万千瓦机组，或4台单机容量20万千瓦机组整体工程；
+                            （3）单机容量30万千瓦以上核电站核岛或常规…
+                        </p>
+                    </li>
+                    <li>
+                        <a href="http://www.dztcjt.com/faq/m-1-177" target="_blank">
+                            公路工程施工总承包企业资质等级标准
+                        </a>
+                        <p>
+                            公路工程施工总承包企业资质分为特级、一级、二级、三级。
+                            一级资质标准：
+                            1、企业近10年承担过下列4项中的3项以上所列工程的施工，工程质量合格。
+                            （1）累计修建一级以上公路路基100公里以上；
+                            （2）累计修建高级路面400万平方米以上；
+                            （3）累计修建单座桥长≥500米或单跨跨度≥100米的公路特大桥6座以上；
+                            （4）完成过单项合同额1亿元以…
+                        </p>
+                    </li>
+                </ul>
+                <a href="http://www.dztcjt.com/faq/m-1" class="view-more-problem">
+                    查看更多问题&gt;&gt;
+                </a>
+            </div>
+            <div class="case-display rela">
+                <a name="case" class="floor">
+                </a>
+                <h2 class="common-problem-bt">
+                    证书展示
+                </h2>
+                <div class="case-banner" id="case-banner">
+                    <div class="case-ban-box">
+                        <div class="tempWrap" style="overflow:hidden; position:relative;">
+                            <div class="ser-wrap" style="width: 4904px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1226px;">
+                                <ul class="clone" style="float: left; width: 1226px;">
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9iea_s90_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    东营市**建筑装饰工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        建筑装修装饰工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.11.11上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.01.20资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.01资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.02.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9hra_kr3_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    山东**电气有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        电力工程施工总包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.02.06上报资料
+                                                    </b>
+                                                    <b>
+                                                        2016.05.17资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2016.06.02资质通告
+                                                    </b>
+                                                    <b>
+                                                        2016.06.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9hii_geh_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    山东**电力工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        安全生产许可证
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2017.03.16上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.06.19资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.06.23资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.06.26领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/dek37_ckq_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    滕州市**电力电子工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        电监类
+                                                    </span>
+                                                    <span>
+                                                        承装（修、试）电力设施许可证
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.04.07上报资料
+                                                    </b>
+                                                    <b>
+                                                        2016.06.10资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.06.23资质通告
+                                                    </b>
+                                                    <b>
+                                                        2016.06.30领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul style="float: left; width: 1226px;">
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9lp7_5qs_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    山东**环保科技有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        环保工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.11.03上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.02.02资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.10资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.02.14领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9l8m_ct2_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    青岛**建筑装饰工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        防水防腐保温工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.11.03上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.01.16资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.01资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.02.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9jvr_66r_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    青岛**电气安装工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        电监类
+                                                    </span>
+                                                    <span>
+                                                        承装（修、试）电力设施许可证
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2017.02.01上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.03.30资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.04.02资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.04.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9jk1_fms_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    青岛**幕墙有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        建筑幕墙工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.12.03上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.02.16资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.25资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.03.02领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul style="float: left; width: 1226px;">
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9iea_s90_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    东营市**建筑装饰工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        建筑装修装饰工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.11.11上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.01.20资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.01资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.02.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9hra_kr3_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    山东**电气有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        电力工程施工总包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.02.06上报资料
+                                                    </b>
+                                                    <b>
+                                                        2016.05.17资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2016.06.02资质通告
+                                                    </b>
+                                                    <b>
+                                                        2016.06.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9hii_geh_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    山东**电力工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        安全生产许可证
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2017.03.16上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.06.19资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.06.23资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.06.26领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/dek37_ckq_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    滕州市**电力电子工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        电监类
+                                                    </span>
+                                                    <span>
+                                                        承装（修、试）电力设施许可证
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.04.07上报资料
+                                                    </b>
+                                                    <b>
+                                                        2016.06.10资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.06.23资质通告
+                                                    </b>
+                                                    <b>
+                                                        2016.06.30领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul style="float: left; width: 1226px;" class="clone">
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9lp7_5qs_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    山东**环保科技有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        环保工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.11.03上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.02.02资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.10资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.02.14领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9l8m_ct2_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    青岛**建筑装饰工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        防水防腐保温工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.11.03上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.01.16资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.01资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.02.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9jvr_66r_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    青岛**电气安装工程有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        电监类
+                                                    </span>
+                                                    <span>
+                                                        承装（修、试）电力设施许可证
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：3个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2017.02.01上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.03.30资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.04.02资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.04.07领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:;">
+                                            <img src="http://www.dztcjt.cn/upload/user/1707/g9jk1_fms_co_img.jpg"/>
+                                            <div class="case-ban-p">
+                                                <h3>
+                                                    青岛**幕墙有限公司
+                                                </h3>
+                                                <p>
+                                                    <span>
+                                                        住建工程类
+                                                    </span>
+                                                    <span>
+                                                        建筑幕墙工程专业承包
+                                                    </span>
+                                                </p>
+                                                <em>
+                                                    办理周期：4个月
+                                                </em>
+                                                <p>
+                                                    <b>
+                                                        2016.12.03上报资料
+                                                    </b>
+                                                    <b>
+                                                        2017.02.16资质公示
+                                                    </b>
+                                                </p>
+                                                <p>
+                                                    <b>
+                                                        2017.02.25资质通告
+                                                    </b>
+                                                    <b>
+                                                        2017.03.02领资质证书
+                                                    </b>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-ban-hover">
+                        <ul>
+                            <li class="on">
+                                1
+                            </li>
+                            <li class="">
+                                2
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="/cer/case" class="view-more-problem">
+                    查看更多证书&gt;&gt;
+                </a>
+            </div>
+            <script type="text/javascript" src="/statics/js/carousel.js">
+            </script>
+            <script>
+                $('.tj-r-ul>
+                li>
+                p').on('click', function(){
+                var el = $(this).children('.tj-r-i');
+                if(el.hasClass('tjexplore')){
+                el.removeClass('tjexplore').addClass('tjfold');
+                $(this).next().hide();
+                }else if(el.hasClass('tjfold')){
+                el.removeClass('tjfold').addClass('tjexplore');
+                $(this).next().show();
+                }
+                });
+                $(function () {
+                //资质详情轮播效果
+                $('#carousel').carousel({curDisplay: 0, autoPlay: true, interval: 3000});
+                });
+            </script>
+        </section>
+        <!-- 底部浮动框 -->
+        <section>
+            <div class="float_botBox" style="display: none;">
+                <div class="close img">
+                </div>
+                <div class="float_bot" id="float_bot">
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/441">
+                                                市政公用工程出售
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            浙江
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：380
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/441">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="441" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/439">
+                                                房建二级转让
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            浙江
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：359
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/439">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="439" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/438">
+                                                市政二级低价转让
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            河南
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：359
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/438">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="438" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/437">
+                                                山东烟台装饰装修幕墙古建筑二级资质转让
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            山东
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：336
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/437">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="437" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/436">
+                                                山东转让防水专业二级承包资质
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            山东
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：4天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：644
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/436">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="436" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/441">
+                                                市政公用工程出售
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            浙江
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：380
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/441">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="441" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/439">
+                                                房建二级转让
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            浙江
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：359
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/439">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="439" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/438">
+                                                市政二级低价转让
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            河南
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：359
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/438">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="438" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/437">
+                                                山东烟台装饰装修幕墙古建筑二级资质转让
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            山东
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：2天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：336
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/437">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="437" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <form action="/cer/info-ask" method="post" class="list-input-form">
+                            <div class="float_left fl">
+                                <div>
+                                    <span class="icon">
+                                        转让
+                                    </span>
+                                    <span>
+                                        <h2>
+                                            <a target="_blank" rel="nofollow" href="/transfer/436">
+                                                山东转让防水专业二级承包资质
+                                            </a>
+                                        </h2>
+                                    </span>
+                                    <span class="price">
+                                        面议
+                                    </span>
+                                </div>
+                                <div class="param">
+                                    <span>
+                                        地区：
+                                        <strong>
+                                            山东
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册时间：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span>
+                                        注册资金：
+                                        <strong>
+                                            未公布
+                                        </strong>
+                                    </span>
+                                    <span class="update-time">
+                                        更新时间：4天前
+                                    </span>
+                                    <span class="page-views">
+                                        浏览量：644
+                                    </span>
+                                </div>
+                                <div class="btn">
+                                    <a target="_blank" rel="nofollow" href="/transfer/436">
+                                        查看详情
+                                    </a>
+                                    <a target="_blank" rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729">
+                                        咨询服务顾问
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="float_right fr">
+                                <div class="tell-phone">
+                                    <span class="phoneIcon img">
+                                    </span>
+                                    <span class="font">
+                                        <p>
+                                            7*24小时 全天候贴心服务
+                                        </p>
+                                        <p>
+                                            400-8394-777
+                                        </p>
+                                    </span>
+                                </div>
+                                <div class="input-phone">
+                                    <p>
+                                        <input id="tell" class="list-input-txt tel required" placeholder="请输入手机号" type="text"/>
+                                    </p>
+                                    <p>
+                                        <input class="list-input-sub sub_trans" data-transfer-id="436" value="提交" type="submit"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="float_dialog">
+            </div>
+            <div id="float_zzc">
+            </div>
+        </section>
+    </div>
+    <div class="section-index section-slogan list ">
+        <div class="section-index-box">
+            <a href="javascript:;" class="slogan-list-1">
+                <span class="bg bg1">
+                </span>
+                <span>
+                    挂牌上市实力雄厚
+                </span>
+            </a>
+            <a href="javascript:;" class="slogan-list-2">
+                <span class="bg bg2">
+                </span>
+                <span>
+                    2000余名服务团队可信赖
+                </span>
+            </a>
+            <a href="javascript:;" class="slogan-list-3">
+                <span class="bg bg3">
+                </span>
+                <span>
+                    年51700家成功案例，通过率高
+                </span>
+            </a>
+            <a href="javascript:;" class="slogan-list-4">
+                <span class="bg bg4">
+                </span>
+                <span>
+                    万人口碑赞誉，服务好
+                </span>
+            </a>
+            <a href="javascript:;" class="slogan-list-5">
+                <span class="bg bg5">
+                </span>
+                <span>
+                    旗下品牌众多，集团经营
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-box">
+            <div class="footer-list">
+                <dl>
+                    <dt>
+                        新手指南
+                    </dt>
+                    <dd>
+                        <a href="/site/reg" target="_blank" rel="nofollow">
+                            注册
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/site/login" target="_blank" rel="nofollow">
+                            登录
+                        </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        快速通道
+                    </dt>
+                    <dd>
+                        <a href="/partime" target="_blank">
+                            我要聘证
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/partime" target="_blank">
+                            我有证书
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/edu/px" target="_blank">
+                            我要考证
+                        </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        特色业务
+                    </dt>
+                    <dd>
+                        <a href="/cer" target="_blank">
+                            资质许可
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/edu" target="_blank">
+                            学历教育
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/tiku" target="_blank">
+                            教育答卷
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/edu/2" target="_blank">
+                            讲课视频
+                        </a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        关于我们
+                    </dt>
+                    <dd>
+                        <a href="/about/index#lxJt" target="_blank">
+                            集团简介
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/about/index#lxJg" target="_blank">
+                            业务架构
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/about/join" target="_blank">
+                            商务合作
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/about/index#lxWh" target="_blank">
+                            企业文化
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/about/index#lxZs" target="_blank">
+                            团队展示
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/about/index#lxRy" target="_blank">
+                            企业荣誉
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="/about/index#footer" target="_blank">
+                            联系我们
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="footer-contact">
+                <dl>
+                    <dt>
+                        <img src="/statics/img/cer/code_phone.png" alt="扫描二维码"/>
+                    </dt>
+                    <dd>
+                        <h2>
+                            400-8394-777
+                        </h2>
+                        <span>
+                            400-013-0111
+                        </span>
+                        <p>
+                            zizhi@dztcgroup.com
+                        </p>
+                        <a rel="nofollow" href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729" target="_blank">
+                            立即咨询
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="footer-bottom">
+                <span>
+                    友情链接 ：
+                </span>
+                <p>
+                    Copyright © 2017 大志天成企业管理咨询集团有限公司 All Rights Reserved 版权所有
+                </p>
+            </div>
+            <!--
+                <div style="height:1000px">
+                    111111111111111
+                </div>
+            -->
+            <!--
+                <div id="shares" style="position:fixed;right:7px;bottom:63px;z-index:99px;height:42px;width:42px">
+                    <a href="###" id="gotop" style="margin-top:-2px;font-size:22px">
+                        <i class="fa fa-angle-up" style="margin-top:12px;color:#999;">
+                        </i>
+                    </a>
+                </div>
+            -->
+            <!--
+                <div id="shares" style="">
+                    &and;
+                </div>
+            -->
+        </div>
+    </div>
+    <!-- 右侧悬浮框 -->
+    <div class="fixed-bar">
+        <div class="fixed-bar-main">
+            <ul>
+                <li>
+                    <a href="https://dbt.zoosnet.net/LR/Chatpre.aspx?id=DBT84865761&amp;cid=1507884726682467798689&amp;lng=cn&amp;sid=1507884726682467798689&amp;p=http%3A//www.dztcsd.com/&amp;rf1=&amp;rf2=&amp;e=%25u6765%25u81EA%25u9996%25u9875%25u7684%25u5BF9%25u8BDD&amp;msg=&amp;d=1507884730729" rel="nofollow" title="在线咨询" target="_blank">
+                        <span class="titles">
+                            在线
+                            <br/>
+                            客服
+                        </span>
+                    </a>
+                </li>
+                <li class="fixed-bar-awx">
+                    <a href="javascript:" title="客服电话">
+                        <span class="titles">
+                            客服
+                            <br/>
+                            电话
+                        </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/about/join" target="_blank" title="商务合作">
+                        <span class="titles">
+                            商务
+                            <br/>
+                            合作
+                        </span>
+                    </a>
+                </li>
+                <li class="fixed-bar-hua">
+                    <a href="javascript:" id="fixed-free-a">
+                        <span class="titles">
+                            意见
+                            <br/>
+                            反馈
+                        </span>
+                    </a>
+                    <div class="bar-hua-alert" id="bar-hua-alert">
+                        <div id="dialogjb" class="qiye-dia">
+                            <!-- <img class="close" src="/statics/img/list/dis_close.png" style="margin: 0 auto;"/> -->
+                            <h5 class="title">
+                                意见反馈
+                            </h5>
+                            <form action="/about/advise" method="post" class="list-input-form">
+                                <div class="xz_con">
+                                    <textarea class="list-input-txt txt-yj required" id="content_yj" name="content" placeholder="请详细描述您的问题或建议，我们将及时跟进解决......">
+                                    </textarea>
+                                    <span>
+                                        10⁄200
+                                    </span>
+                                </div>
+                                <div class="xz_type">
+                                    <input name="phone" class="list-input-txt info-tel" placeholder="手机号/邮箱/QQ号（留下联系方式，方便我们联系您）" type="text"/>
+                                </div>
+                                <input name="_csrf" id="_csrf" value="RUpnc29CeHcvJQ4aPgg.JCYoHUQ.KQknGikLBT8BTFoMHD5DWwEZFQ==" type="hidden"/>
+                                <input class="list-input-sub post_report" value="提交" type="submit"/>
+                            </form>
+                            <div id="dialog">
+                            </div>
+                            <div id="zzc">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fixed-bar-top" style="display: none;">
+                    <a href="javascript:">
+                        <span class="titles">
+                            返回
+                            <br/>
+                            顶部
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="fixed-bar-wx">
+                400-8394-777
+            </div>
+        </div>
+    </div>
+</div>
+{template "content","footer"}

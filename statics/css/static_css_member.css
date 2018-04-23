@@ -1,0 +1,1090 @@
+@charset "utf-8";
+.wrapper{background-color: #fafafa;}
+/**********内容 content start************/
+.qy_sider .qy_wrapper{
+	width: 1226px;
+	margin:0 auto;
+	padding-bottom: 40px;
+}
+.qy_sider textarea{resize: none;padding-left: 10px;padding-top: 10px;}
+/***********aside 侧边栏  左边-***********/
+.qy_sider .issuJl_aside{
+	width: 302px;
+	min-height: 655px;
+	background-color: #fff;
+}
+.qy_sider .issuJl_aside .issuJl_aside_menu{
+	width: 181px;
+	margin: 70px 60px;
+}
+.qy_sider .issuJl_aside ul.issuJl_aside_list{
+	width: 100%;
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 35px;
+}
+.qy_sider .issuJl_aside ul.issuJl_aside_list>li,.company_center .issuJl_aside ul.issuJl_sublist>li{
+	line-height: 30px;
+}
+.qy_sider .issuJl_aside ul.issuJl_aside_list>li h2{
+	font-size: 16px;
+	color: #666666;
+}
+.qy_sider .issuJl_arrow_open{
+	display: inline-block;
+	width: 16px;
+	height: 7px;
+	background: url(../img/list/issuJl_arrow.png) no-repeat 0 0;
+}
+.qy_sider .issuJl_arrow{
+	display: inline-block;
+	width: 16px;
+	height: 11px;
+	background: url(../img/list/issuJl_arrow.png) no-repeat 0 -6px;
+}
+
+/***********企业中心首页 content 右边内容***********/
+.company_center .comstate_content{
+	width: 913px;
+	color: #666;
+}
+.company_center .comstate_r_menu{
+	padding: 30px 57px 60px 57px;
+    background-color: #fff;
+}
+
+.company_center .comstate_title{
+	font-size: 26px;
+	cursor: pointer;
+	color: #999;
+}
+/*<!--公司认证状态-->*/  
+.company_center .zzBao_colBlue{
+	color: #4484EA;
+}
+.company_center .comedit_renz_title{
+	width: 105px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #4484EA;
+	color: #fff;
+	border-radius: 5px;
+}
+.company_center .comstate_renz_p>img{
+	display: inline-block;
+	vertical-align: middle;
+}
+.company_center .comstate_renz_p>p{
+	display: inline-block;
+	margin-left: 35px;
+	margin-top: 14px;
+	font-size: 12px;
+}
+.company_center .comCenter_renz>p{
+    margin-bottom: 15px;
+}
+.company_center .comCenter_txt .comCenter_font18{
+	font-size: 18px;
+	color: #333;
+}
+.company_center .comCenter_txt>a{
+	display: inline-block;
+}
+.company_center .comCenter_txt>a>span.colRed{
+	color: #ff4848;
+}
+.company_center .comCenter_renz>p.comCenter_colgray{
+	color: #c7c8c8;
+	font-size: 12px;
+}
+.company_center .comCenter_renz>p.comCenter_colgray>a{
+	display: inline-block;
+	width: 88px;
+	height: 24px;
+	color: #fff;
+	background-color: #4484EA;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 30px;
+	
+}
+/********* 发布的简历 ***************/
+
+.company_center .issuJl_r_menu{
+	padding: 45px 62px 20px 62px;
+	background-color: #fff;
+}
+.company_center .issuJl_r_title{
+	font-size: 26px;
+	color: #666;
+}
+.company_center .issuJl_r_table{
+	height: 345px !important;
+	overflow: hidden ! important;
+}
+.company_center .issuJl_r_table>table a:hover{
+	color: #4484EA;
+}
+.company_center .issuJl_r_table .issuJl_table_title{
+	background-color: #eee;
+	height: 40px;
+	color: #666;
+}
+.company_center .issuJl_r_table th{
+	text-align: center;
+}
+.company_center .issuJl_r_table th.tit{
+	text-align: left;padding-left:76px
+}
+.company_center .issuJl_r_table th>a{
+	display: inline-block;
+}
+.company_center .issuJl_r_table .padl34{
+	padding-left: 34px;
+}
+.company_center .issuJl_r_table .issuJl_table_content{
+	height: 60px;
+	line-height: 60px;
+	font-size: 12px;
+	border-bottom: 1px solid #eee;
+}
+.company_center .issuJl_r_table .issuJl_table_content td{text-align: center}
+.company_center .issuJl_r_table .colGreen{
+	color: #00D38B;
+}
+.company_center .issuJl_r_table .colRed{
+	color: red;
+}
+.company_center .comCenter_table_more{
+	width: 63px;
+	margin: 20px auto;
+}
+.company_center .comCenter_table_more>a{
+	display: inline-block;
+	width: 62px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	background-color: #eee;
+}
+
+/***********企业中心首页  内容 content end***********/
+
+/***********发布招聘信息  内容 content start***********/
+.issue_qiye  .marl31{margin-left: 31px;}
+.issue_qiye .iqy_content{
+	width: 913px;
+	min-height: 655px;
+	color: #666;
+	background-color: #fff;
+}
+.issue_qiye .iqy_r_menu{
+	margin: 45px 62px;
+}
+.issue_qiye .iqy_r_title{
+	font-size: 26px;
+	color: #666;
+}
+.issue_qiye .iqy_r_ptxt{
+	margin-top: 40px;
+	height: 37px;
+	font-size: 16px;
+	color: #4484EA;
+	border-bottom: 1px solid #eee;
+}
+
+.issue_qiye select {
+	padding-left: 10px;
+    border:1px  solid #ccc;
+	width: 160px;
+	height: 50px;
+	color: #999;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url(../img/list/arrow_down.png) no-repeat scroll 128px center transparent;
+    padding-right: 14px;
+}
+.issue_qiye select.level {display: none;margin-left: 15px}
+.issue_qiye .iqy_r_form>form li{
+	margin-bottom: 15px;
+	position: relative;
+}
+.issue_qiye .iqy_r_form>form li em{color:#ff474f;margin-right:5px}
+.issue_qiye .iqy_r_form>form li .span{margin-left:14px}
+.issue_qiye .iqy_r_form>form li span.waring{
+	 margin-left: 110px;
+}
+
+.issue_qiye .iqy_r_form .iqy_form_bt>input{
+	width: 402px;
+	height: 50px;
+	padding-left: 15px;
+	border:1px solid #ccc;
+}
+.issue_qiye .iqy_r_form .iqy_form_bt>button{
+	width: 70px;
+	height: 52px;
+	background-color: #fafafa;
+	border: 1px solid #ccc;
+	margin-left: 15px;
+	color: #999;
+}
+/***** 证书信息 *******/
+.issue_qiye .iqy_r_form .iqy_form_xxi{
+	width: 72px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #4484ea;
+	color: #fff;
+	border-radius: 3px;
+	margin-top: 30px;
+	margin-bottom: 23px;
+}
+/****** 修改radio默认样式 *******/
+.issue_qiye .iqy_label{
+	margin-top: 20px;
+	display:inline-block;
+}
+.issue_qiye .iqy_radio{
+	display:none;
+}
+.issue_qiye .iqy_radioInput{
+	width:16px;
+	height:16px;
+	background-color:#fff;
+	border:1px solid #4484EA;
+	border-radius:100%;
+	display:inline-block;
+	margin-right:10px;
+	margin-top:-1px;
+	vertical-align:middle;
+	line-height:1;
+}
+.issue_qiye .iqy_radio:checked + .iqy_radioInput:after{
+	background-color:#4484EA;
+	border-radius:100%;
+	content:"";
+	display:inline-block;
+	height:12px;
+	margin:1px;
+	width:12px;
+}
+/****** 修改radio默认样式 end *******/
+.issue_qiye .iqy_r_form .iqy_textarea{
+	width: 550px;
+	height: 155px;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+.issue_qiye .iqy_r_form .iqy_tijiao{
+	border: 0;
+	border: none;
+	width: 130px;
+	height: 47px;
+	margin-left: 320px;
+	border-radius: 25px;
+	background-color: #4484EA;
+	color: #fff;
+	margin-top: 45px;
+}
+.issue_qiye .iqy_r_form input,.issue_qiye .iqy_r_form select,.issue_qiye .iqy_r_form textarea,.issue_qiye .iqy_r_form button{
+	font-family: "微软雅黑";
+}
+/***********内容 content end***********/
+
+/***********弹出框样式 start***********/
+.iqy_alert{
+	width: 100%;
+	min-width: 1226px;
+	min-height: 1360px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-color: #000;
+	opacity: 0.5;
+}
+.iqy_alert_wrapper{
+	width: 480px;
+	height: 285px;
+	position: fixed;
+	top: 30%;
+	left: 40%;
+	z-index: 999;
+	background-color: #fff;
+}
+.iqy_alert_wrapper .iqy_alert_content{
+	margin: 30px 50px;
+}
+.iqy_alert_wrapper .iqy_alert_content>h2{
+	border-bottom: 1px solid #EEEEEE;
+	font-size: 16px;
+	padding-bottom: 25px;
+}
+.iqy_alert_wrapper #iqy_alert_close{
+	color: #c9c9c9;
+	font-size: 14px;
+	cursor: pointer;
+}
+.iqy_alert_wrapper .iqy_aler_img{
+	width: 135px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 35px;
+	margin-left: 125px;
+	font-size: 16px;
+	color: #666;
+	background: url(../img/list/iqy_tijiao.png) no-repeat left top;
+}
+.iqy_alert_wrapper .iqy_aler_txt{
+	width: 340px;
+	height: 50px;
+	line-height: 30px;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+/***********弹出框样式 end ***********/
+
+/***********发布招聘信息  内容 content end***********/
+
+/***********收到的简历 content 右边内容 start***********/
+.issue_jianli .issuJl_content{
+	width: 913px;
+	min-height: 655px;
+	background-color: #fff;
+}
+.issue_jianli .issuJl_r_menu{
+	margin: 45px 62px;
+}
+.issue_jianli .issuJl_r_title{
+	font-size: 26px;
+	color: #666;
+}
+.issue_jianli .issuJl_r_table{
+}
+.issue_jianli .issuJl_r_table table th{
+	background-color: #eee;
+	line-height: 40px;
+}
+.issue_jianli .issuJl_r_table table td{
+	line-height: 60px;
+	text-align: center;
+	font-size: 12px;
+	color: #888;
+	border-bottom: solid 1px #f4f4f4;
+}
+.issue_jianli .issuJl_r_table table tr:last-child td{
+	border-bottom: none;
+}
+.issue_jianli .issuJl_r_table table td span{
+	color: #4484ea;
+}
+.issue_jianli .issuJl_r_table table td a{
+	color: #888;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0px 10px;
+}
+.issue_jianli .issuJl_r_table table td a:hover{
+	color: #4484ea;
+}
+
+.issue_jianli .issuJl_r_table{
+}
+.company_new_transfer table th,.issue_jianli .issuJl_r_table table th{
+	background-color: #eee;
+	line-height: 40px;color:#666;font-weight: normal;font-size: 14px
+}
+.company_new_transfer table th.tit,.issue_jianli .issuJl_r_table table th.tit{text-align: left;padding-left:76px}
+.company_new_transfer table td,.issue_jianli .issuJl_r_table table td{
+	line-height: 60px;
+	text-align: center;
+	font-size: 12px;
+	color: #848484;
+	border-bottom: solid 1px #f4f4f4;
+}
+.company_new_transfer table tr:last-child td,.issue_jianli .issuJl_r_table table tr:last-child td{
+	border-bottom: none;
+}
+.company_new_transfer table td span,.issue_jianli .issuJl_r_table table td span{
+	color: #4484ea;
+}
+.company_new_transfer table td a,.issue_jianli .issuJl_r_table table td a{
+	color: #888;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0px 10px;
+}
+.company_new_transfer table td a:hover,.issue_jianli .issuJl_r_table table td a:hover{
+	color: #4484ea;
+}
+
+/*********** 收到的简历 右边内容 content end***********/
+
+/***********信息认证 content 右边内容 start***********/
+.company_edit img{display: block;}
+.company_edit .comedit_content{
+	width: 913px;
+	min-height: 903px;
+	color: #666;
+	background-color: #fff;
+}
+.company_edit .comedit_r_menu{
+	margin: 45px 57px;
+}
+
+.company_edit .comedit_r_title>li{
+	float: left;
+	font-size: 26px;
+	margin-right: 15px;
+	cursor: pointer;
+	color: #999;
+}
+.company_edit .comedit_r_title .comedit_title_line{
+    display: inline-block;
+    width: 1px;
+    height: 25px;
+    background-color: #e7e7e7;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+.company_edit .comedit_r_menu .comedit_title_current{
+	color: #4484EA;
+}
+
+/*<!------tab切换------>*/
+
+/*<!--tab 公司信息-->*/
+.company_edit .comedit_tab .comedit_tab_file{
+	position: relative;	
+	padding-bottom: 30px;
+	border-bottom: 1px solid #eee;
+}
+.company_edit .comedit_tab .comedit_tab_file>input{
+	opacity:0;
+    filter:alpha(opacity=0);
+    height: 95px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+.company_edit .comedit_tab_form{
+	margin-top: 35px;
+	position: relative;
+}
+.company_edit .comedit_tab_form input_old{
+	width: 160px;
+	height: 50px;
+	text-indent: 10px;
+	border: 1px solid #ccc;
+}
+.company_edit .comedit_tab_form ul>li{
+	margin-top: 25px;
+}
+.company_edit .comedit_tab_form .comedit_tab_textarea{
+	width: 520px;
+	height: 108px;
+	border: 1px solid #ccc;
+	vertical-align: top;	
+	font-size: 13px;
+	font-family: "微软雅黑";
+}
+.company_edit .comedit_tab_form .comedit_tab_save{
+	border: 0;
+	border: none;
+	width: 130px;
+	height: 47px;
+	margin-left: 320px;
+	border-radius: 25px;
+	background-color: #4484EA;
+	color: #fff;
+	margin-top: 45px;
+	font-family: "微软雅黑";
+}
+
+/*<!--tab 公司认证-->*/     
+.company_edit .comedit_renz_title{
+	width: 105px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #4484EA;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.company_edit .comedit_tab .comedit_renz_txt{ 
+	position: relative; /* 保证子元素的定位 */ 
+	width: 61px; 
+	height: 22px; 
+	background: #f0f0f0; 
+	text-align: center; 
+	cursor: pointer; 
+	border-radius: 5px;
+} 
+.company_edit .comedit_tab .comedit_renz_txt>span{ 
+	display: inline-block;  
+	color: #333; 
+	font-size: 12px; 
+} 
+.company_edit .comedit_tab .comedit_renz_txt>.comedit_renz_upload{ 
+	position: absolute;
+    top: 0;
+    left: 55px;
+    width: 120px; 
+}
+.company_edit .comedit_tab .comedit_renz_txt>input{ 
+	display: block; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 61px; /* 宽高和外围元素保持一致 */ 
+	height: 22px; 
+	opacity: 0; 
+	-moz-opacity: 0; /* 兼容老式浏览器 */ 
+	filter: alpha(opacity=0); /* 兼容IE */ 
+} 
+.company_edit .comedit_renz_p>p{
+	margin-top: 14px;
+	font-size: 12px;
+}
+.company_edit .comedit_mingc{
+	margin-top: 35px;
+	padding-top: 28px;
+	border-top: 1px solid #eee;
+}
+.company_edit .comedit_mingc_input{
+	margin-top: 23px;
+}
+.company_edit .comedit_mingc_input>input{
+	width: 160px;
+	height: 50px;
+	text-indent: 10px;
+	border: 1px solid #ccc;
+}
+.company_edit .comedit_input_tijiao{
+	margin-top: 60px;
+	text-align: center;
+}
+.company_edit .comedit_input_tijiao>input{	
+	width: 131px;
+	height: 47px;
+	background-color: #4484EA;
+	border: 0;
+	border-radius: 30px;
+	color: #fff;
+	font-family: "微软雅黑";
+	cursor: pointer;
+}
+.company_new_transfer table td.issuJl_table_txt, .issue_jianli .issuJl_r_table table td.issuJl_table_txt,.company_center .issuJl_r_table td.issuJl_table_txt{
+	width: 212px;
+	max-width: 212px;
+	padding-left: 34px;
+	text-overflow:ellipsis; 
+	white-space:nowrap; 
+	overflow:hidden;text-align: left
+}
+/***********内容 content end***********/
+
+/***********弹出框样式***********/
+.iqy_alert_wrapper .com_alert_renz{
+	margin-left: 77px;
+}
+.iqy_alert_wrapper .com_alert_renz>a{
+	display: inline-block;
+	width: 105px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 20px;
+	margin-right: 20px;
+}
+.iqy_alert_wrapper .com_alert_renz>a:first-child{
+	background-color: #4484EA;
+	color: #fff;
+}
+.iqy_alert_wrapper .com_alert_renz>a:last-child{
+	background-color: #f2f2f2;
+	color: #999;
+}
+
+/*********** 信息认证 内容 content end***********/
+
+/*********** 认证状态 content 右边内容 start***********/
+.company_state .comstate_content{
+	width: 913px;
+	min-height: 903px;
+	color: #666;
+	background-color: #fff;
+}
+.company_state .comstate_r_menu{
+	margin: 45px 57px;
+}
+
+.company_state .comstate_title{
+	font-size: 26px;
+	cursor: pointer;
+	color: #666;
+}
+/*<!--公司认证状态-->*/  
+.company_state .zzBao_colBlue{
+	color: #4484EA;
+}
+.company_state .comedit_renz_title{
+	width: 105px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #4484EA;
+	color: #fff;
+	border-radius: 5px;
+}
+.company_state .comstate_renz_p>img{
+	display: inline-block;
+	vertical-align: middle;
+}
+.company_state .comstate_renz_p>p{
+	margin-top: 14px;
+	font-size: 14px;
+	color: #4484ea;
+}
+.company_state .comstate_renz_p>p>img{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/**** 认证失败 *****/
+.company_state .zzBao_colRed{
+	color: #ff3737;
+}
+.company_state .comstate_btn{
+	display: inline-block;
+	margin-left: 203px;
+	width: 108px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	background-color: #ff3737;
+	color: #fff;
+	border-radius: 30px;
+	cursor: pointer;
+	
+}
+/*********** 认证状态 内容 content end***********/
+
+/********** 公司预览 内容 content start************/
+.company_details .qy_wrapper{
+	width: 1226px;
+	margin:0 auto;
+}
+/***********content 内容***********/
+.company_details .comdetail_menu{	
+	color: #666;
+	padding: 30px 57px 60px 57px;
+    background-color: #fff;
+}
+.company_details .comdetail_title{
+	font-size: 18px;
+	color: #333;
+	margin-bottom: 32px;
+}
+.company_details .comdetail_cg{
+	display: inline-block;
+	vertical-align: middle;
+}
+.company_details .comdetail_zpxx>a{
+	display: inline-block;
+	width: 125px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 30px;
+	background-color: #4484EA;
+	color: #fff;
+    margin-top: 50px;
+    margin-right: 60px;
+}
+/****** 公司预览-- 公司简介 *********/
+.company_details .comdetail_main{
+	margin-top: 35px;
+	
+}
+.company_details .comdetail_l_content{
+	padding: 30px;
+	width: 914px;
+	background-color: #fff;
+}
+.company_details .comdetail_l_title{
+	font-size: 16px;
+	color: #666;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+.company_details .comdetail_l_txt{
+	width: 831px;	
+	margin-top: 15px;
+}
+.company_details .comdetail_l_txt>p{
+	line-height: 30px;
+	text-indent: 5px;
+}
+.company_details .comdetail_l_txt>a{
+	display: inline-block;
+}
+.company_details .comdetail_l_txt>a:hover{
+	color: #4484EA;
+}
+.company_details .comdetail_l_table>table tr.comdetail_table_menu th{
+	height: 60px;
+	border-bottom: 1px solid #eee;
+}
+.company_details .comdetail_table_title>th{
+	background-color: #eee;
+	height: 40px;
+	color: #666;
+}
+
+/****************分页设置***********************/
+
+.company_details .cutpage{
+	font-size:14px;
+	margin:50px auto; 
+	text-align:center;
+}
+.company_details .cutpage a{
+	display:inline-block;
+	padding-left:5px; 
+	text-decoration:none; 
+	margin:3px; 
+	vertical-align:middle;
+}
+.company_details .cutpage a span{ 
+	padding:3px 10px; 
+	border:1px solid #ececec; 
+	border-radius:5px; 
+	display:inline-block; 
+	cursor:pointer; 
+}
+.company_details .cutpage a.current span{
+	border-right:2px solid #4484EA;
+	border-left:2px solid #4484EA;
+	border-top:1px solid #4484EA;
+	border-bottom:1px solid #4484EA;
+}
+.company_details .cutpage a:link,.cutpage a:visited{
+	color:#666;
+}
+.company_details .cutpage a:hover span{ 
+	border-right:2px solid #4484EA;
+	border-left:2px solid #4484EA;
+	border-top:1px solid #4484EA;
+	border-bottom:1px solid #4484EA;
+}
+
+/****** 右面 *********/
+.company_details .comdetail_r_main{
+	width: 300px;
+	background-color: #fff;
+}
+.company_details .comdetail_r_menu{
+	padding: 30px;
+}
+.company_details .comdetail_r_ul>li{
+	line-height: 30px;
+}
+
+/*********** 公司预览 内容 content end***********/
+
+/*********** 新增认证状态**********/
+.company_new_state{
+	width: 80%;
+	height: auto;
+	margin: 0px auto;
+	box-shadow: 0px 0px 10px #ccc;
+	padding: 60px 50px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	clear: both;
+
+}
+.company_new_state p{
+	font-size: 14px;
+	color: #938585;
+	line-height: 30px;
+}
+.company_new_state a{
+	color: #4484ea;
+}
+.company_new_state>img{
+	margin:0px auto 15px auto;
+}
+.company_new_state .company_new_progress{
+	border: solid 1px #f0f0f0;
+	width: 100%;
+	height: 18px;
+	margin-top: 15px;
+}
+.company_new_state .company_new_progress>div{
+	height: 16px;
+}
+.company_new_success>.company_new_progress>div{
+	width: 100%;
+	background-color: #5cd49d;
+}
+#applay_progress>.company_new_progress>div{
+	width: 50%;
+}
+.company_new_review>.company_new_progress>div{
+	width: 50%;
+	background-color: #ffc148;
+}
+.company_new_false>.company_new_progress>div{
+	width: 100%;
+	background-color: #f76f7f;
+}
+.company_new_state .company_new_text{
+	font-size: 12px;
+}
+.company_new_state .company_new_text p{
+	padding-top: 30px;
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+.company_new_state .company_new_text strong{
+	font-size: 16px;
+	color: #ea8e0b;
+}
+.company_new_state .company_new_text div{
+	color: #b3b2b2;
+}
+.company_tab_menu{
+	margin: 40px 0px 30px 0px;
+}
+.company_tab_menu li{
+	float: left;
+	width: 25%;	
+}
+.company_tab_menu li a{
+	display: inline-block;
+	line-height: 30px;
+	font-size: 16px;
+	color: #5f5f5f;
+}
+.company_tab_menu li a:hover,.company_tab_menu li.active a{
+	color: #4484ea;
+	border-bottom: solid 2px #4484ea;
+}
+.company_new_transfer{
+	display: none;
+}
+/*.company_new_transfer table th{
+	background-color: #eee;
+	line-height: 40px;
+}
+.company_new_transfer table td{
+	line-height: 60px;
+	text-align: center;
+	font-size: 12px;
+	color: #888;
+	border-bottom: solid 1px #f4f4f4;
+}
+.company_new_transfer table tr:last-child td{
+	border-bottom: none;
+}
+.company_new_transfer table td span{
+	color: #4484ea;
+}
+.company_new_transfer table td a{
+	color: #888;
+	display: inline-block;
+	border:solid 1px #eee;
+	line-height: 20px;
+	padding: 0px 10px;
+	background-color: #f5f5f5;
+}
+.company_new_transfer table td a:hover{
+	color: #4484ea;
+}*/
+.company_oprate{
+	width: 70px;
+	color: #888;
+}
+.company_oprate_p{
+	width: 70px;
+	color: #888;
+}
+a.company_contact{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color:#4484ea;
+	padding: 20px 0px;
+}
+a.company_contact img{
+	float: left;
+	margin-right: 10px;
+}
+a.company_contact span{
+
+}
+.transfer_form{
+	padding-top: 40px;
+	position: relative;
+}
+.transfer_form input[type='text']{
+	height: 37px;
+	border: solid 1px #d1d1d1;
+	margin-right: 15px;
+	padding-left: 5px;
+	color: #666;
+}
+.transfer_form input.transfer_title{
+	width: 300px;
+}
+.transfer_form input#dateinfo{
+	width: 145px;
+}
+.transfer_form table tr td{
+	padding-bottom: 20px;
+	color: #666;
+}
+.transfer_form table tr td:first-child{
+	width:135px;
+	padding-right: 50px;
+	text-align: right;
+}
+.transfer_form em,.transfer_form table tr td>label{
+	color: #ff474f;
+	margin-right: 5px;
+}
+.transfer_form input.transfer_common{
+	width: 145px;
+}
+.transfer_form textarea{
+	width: 550px;
+	height: 135px;
+	border: solid 1px #d1d1d1;
+	resize: none;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+.transfer_form table tr td h2{
+	text-align: left;
+}
+.transfer_form select{
+	width: 145px;
+	height: 37px;
+	margin-right: 16px;
+	border:solid 1px #d1d1d1;
+	color: #666;
+}
+.transfer_form table tr td div{
+	width: 100%;
+	text-align: center;
+	padding: 25px 0px;
+	color: #a5a5a5;
+}
+.transfer_form table tr td div p a{
+	color: #4484ea;
+}
+.transfer_form table tr td input[type='checkbox'],.transfer_form table tr td label{
+	vertical-align: middle;
+}
+.transfer_form table tr td input[type='submit']{
+	width: 140px;
+	height: 46px;
+	border: none;
+	background-color: #4484ea;
+	color: #fff;
+	text-align: center;
+	border-radius: 30px;
+	margin-top: 25px;
+}
+.transfer_form table tr td h2{
+	padding:50px 0px 20px 0px;
+}
+.transfer_form textarea.waring{
+	color: #f00;
+}
+.transfer_form .company_line{
+	height: 5px;
+	border-bottom: solid 1px #f3f3f3;
+	width: 80%;
+	margin:0px auto;
+}
+.company_new_text>ul{
+	height: 60px;
+	padding:30px 0px 0px 60px;
+}
+.company_new_text>ul>li{
+	float: left;
+	display: inline-block;
+	margin-right: 15px;
+	line-height: 30px;
+}
+.company_new_text>ul>li a{
+	display: block;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #10afea;
+	padding:0px 10px;
+}
+.person-list form h2{
+	font-size: 26px;
+	display: inline-block;
+	color: #666;
+	padding: 20px 0px;
+	clear: both;
+}
+.transfer_form .transfer_time select{
+	width: 87px;
+}
+.company_edit .comedit_tab_form .company_tips{
+	width: 410px;
+	height: 120px;
+	background-color: #fffcdd;
+	border:solid 1px #ebebeb;
+	padding: 30px 20px;
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	z-index: 9;
+	line-height: 30px;
+	color: #8c8c8c;
+}
+.company_edit .comedit_tab_form .company_tips strong{
+	color: #ff474f;
+	font-size: 18px;
+}
+.company_edit .comedit_tab_form .company_pic_tips{
+	width: 355px;
+	height: 54px;
+	padding: 15px;
+	background-color: #fffcdd;
+	border:solid 1px #ebebeb;
+	font-size: 12px;
+	color: #8c8c8c;
+	position: absolute;
+	top: 840px;
+	right: 60px;
+}
+
+/*发布协议弹出遮罩层*/
+#dialog{height:640px;width:1018px;position:fixed;z-index:99999;left:50%;top:100px;margin-left:-400px;display:none;background:#fff;padding:0 10px}
+#dialog .title{height:102px;width:858px;margin:0 auto;font-size:20px;color:#535353;line-height:102px;text-align:center;border-bottom:solid 1px #dedfde}
+#dialog #content{height:458px;width:858px;margin:0 auto;font-size:20px;overflow:hidden;padding:40px 0 0 0}
+#dialog #content .protocol-con{height:426px;padding:10px;line-height:20px;overflow-x:hidden;overflow-y:auto}
+#dialog #content .protocol-con .WordSection1{width:776px}
+#dialog #content .protocol-con p{font-size:12px;color:#535353}
+#dialog #content .protocol-con .Tits{font-size:14px;font-weight:600}
+#dialog .close{text-align:center;margin:35px 0 0px 0}
+#dialog .close #diaBtn{text-align:center;width:100px;height:36px;line-height:36px;background:#1492ef;color:#fff;border-radius:3px;cursor:pointer;margin:0 auto}
+#zzc{height:100%;width:100%;position:fixed;top:0;left:0;background:#999;z-index:99;display:none}
