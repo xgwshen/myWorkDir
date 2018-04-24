@@ -4,7 +4,7 @@ return array (
 	'default' => array (
 		'hostname' => '127.0.0.1',
 		'port' => 3306,
-		'database' => 'lianqi_cn',
+		'database' => 'worksql',
 		'username' => 'root',
 		'password' => 'root',
 		'tablepre' => 'vs_',

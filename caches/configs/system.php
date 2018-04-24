@@ -21,12 +21,12 @@ return array(
 
 //附件相关配置
 'upload_path' => PHPCMS_PATH.'uploadfile/',
-'upload_url' => 'http://www.sszhyx.com/uploadfile/', //附件路径
+'upload_url' => 'http://www.mework.com/uploadfile/', //附件路径
 'attachment_stat' => '1',//是否记录附件使用状态 0 统计 1 统计， 注意: 本功能会加重服务器负担
 
-'js_path' => 'http://www.sszhyx.com/statics/js/', //CDN JS
-'css_path' => 'http://www.sszhyx.com/statics/css/', //CDN CSS
-'img_path' => 'http://www.sszhyx.com/statics/images/', //CDN img
+'js_path' => 'http://www.mework.com/statics/js/', //CDN JS
+'css_path' => 'http://www.mework.com/statics/css/', //CDN CSS
+'img_path' => 'http://www.mework.com/statics/images/', //CDN img
 'app_path' => 'http://www.sszhyx.com/',//动态域名配置地址
 
 'charset' => 'utf-8', //网站字符集
@@ -44,7 +44,7 @@ return array(
 
 'phpsso' => '1',	//是否使用phpsso
 'phpsso_appid' => '1',	//应用id	
-'phpsso_api_url' => 'http://www.sszhyx.com/phpsso_server',	//接口地址
+'phpsso_api_url' => 'http://www.mework.com/phpsso_server',	//接口地址
 'phpsso_auth_key' => 'GdnDic6XIeowoTo0Guhed9IGklRg7Kmy', //加密密钥
 'phpsso_version' => '1', //phpsso版本
 
