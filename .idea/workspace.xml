@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47e4e4ef-6020-427c-8a51-b0aae04a94a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_commons/caches_data/category_content.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/caches/caches_commons/caches_data/category_content.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_commons/caches_data/category_content_1.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/caches/caches_commons/caches_data/category_content_1.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_commons/caches_data/category_items_12.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/caches/caches_commons/caches_data/category_items_12.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_commons/caches_data/sitelist.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/caches/caches_commons/caches_data/sitelist.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/category_csfw.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/category_gsfw.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/category_jydt.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/category_txjy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/header_page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/list_download.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/list_gsfw.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/list_jydt.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/message.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/content/page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/member/login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/member/login_header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/caches_template/lianqi/member/register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/configs/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/caches/configs/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caches/configs/system.php" beforeDir="false" afterPath="$PROJECT_DIR$/caches/configs/system.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpcms/libs/functions/global.func.php" beforeDir="false" afterPath="$PROJECT_DIR$/phpcms/libs/functions/global.func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpcms/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/phpcms/base.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,8 +52,8 @@
       <file leaf-file-name="base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phpcms/base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="91" column="7" lean-forward="true" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+            <state relative-caret-position="480">
+              <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -105,6 +82,8 @@
         <option value="$PROJECT_DIR$/phpcms/modules/admin/templates/login.tpl.php" />
         <option value="$PROJECT_DIR$/phpcms/modules/admin/category.php" />
         <option value="$PROJECT_DIR$/phpcms/libs/functions/global.func.php" />
+        <option value="$PROJECT_DIR$/.git/config" />
+        <option value="$PROJECT_DIR$/phpcms/base.php" />
       </list>
     </option>
   </component>
@@ -180,6 +159,21 @@
               <item name="phpcms" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="phpcms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lianqi" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="phpcms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lianqi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -213,12 +207,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524532285994</updated>
-      <workItem from="1524532287117" duration="3765000" />
+      <workItem from="1524532287117" duration="3949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3765000" />
+    <option name="totallyTimeSpent" value="3949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -293,8 +287,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phpcms/base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="91" column="7" lean-forward="true" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+        <state relative-caret-position="480">
+          <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.git/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

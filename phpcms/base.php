@@ -99,7 +99,7 @@ class pc_base {
 		
 	/**
 	 * 加载类文件函数
-	 * @param string $classname 类名
+	 * @param string $classname 类名1
 	 * @param string $path 扩展地址
 	 * @param intger $initialize 是否初始化
 	 */
